@@ -24,23 +24,27 @@ class Pilha:
             valor = self.topo
             self.topo = self.topo.__prox
             self.tamanho -= 1
-            return valor._valor
+            return valor.get_valor()
 
     def peek(self):
         if self.is_empty():
             raise Exception("Sorry, pilha vazia!")
         else:
-            return self.topo._valor
-
-    """ def list_items(self):
+           return self.topo.get_valor()
+        
+    def list_items(self):
         if self.is_empty():
             raise Exception("Sorry, pilha vazia!")
         else:
-            print("Relação de itens na pilha:\n")
-           # pilha_invertida = self.__pilha.reverse() 
-            for item in self.__pilha:
-                print(item)
-            print("Base da Pilha") """
+            a = ''
+            c = self.topo
+            while(c):
+                a += str(c.get_valor()) + '\n'
+                c = c.__prox
+            return a
         
+    def __str__(self) -> str:
+        return self.list_items()
+    
     def get_size(self):
         return self.tamanho

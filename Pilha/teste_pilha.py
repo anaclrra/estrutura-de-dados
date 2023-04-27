@@ -1,4 +1,4 @@
-from exercicio import Pilha
+from pilha import Pilha
 
 pilha = Pilha()
 
@@ -16,7 +16,8 @@ print(f"Removendo item da pilha: {pilha.pop()}")
 print(f"Tamanho da pilha: {pilha.get_size()}")
 print(f"Pilha vazia? {pilha.is_empty()}")
 
-#pilha.list_items()
+pilha.list_items()
+print(pilha)
 
 print(f"Removendo item da pilha: {pilha.pop()}")
 print(f"Removendo item da pilha: {pilha.pop()}")
